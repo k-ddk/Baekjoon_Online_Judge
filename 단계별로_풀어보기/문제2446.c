@@ -1,3 +1,4 @@
+//별찍기 문제
 #include <stdio.h>
 
 int main()
