@@ -22,12 +22,13 @@ int main()
 
 		tmp = sqrt(len);
 
-		if (tmp*tmp == len)
-			printf("%d\n", 2 * (tmp - 1) + 1);
-		else if ((tmp + 1)*(tmp + 1) - len > tmp)
-			printf("%d\n", 2 * tmp);
-		else
+		//예를 들어 제곱수 9를 기준으로
+		if (tmp*tmp == len)  //9인 경우
+			printf("%d\n", 2 * tmp - 1);
+		else if ((tmp + 1)*(tmp + 1) - len <= tmp)  //3의 제곱인 9기준 3개에 해당하는 경우
 			printf("%d\n", 2 * tmp + 1);
+		else   
+			printf("%d\n", 2 * tmp);
 
 	}
 
