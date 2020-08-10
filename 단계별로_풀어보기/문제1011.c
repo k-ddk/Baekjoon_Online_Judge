@@ -3,8 +3,8 @@
 
 int main()
 {
-	int T, x, y, len, tmp;
-	int cnt;
+	int T, x, y, tmp, cnt;
+	double len;
 
 	scanf("%d", &T);
 
@@ -20,16 +20,15 @@ int main()
 			continue;
 		}
 
-		tmp = sqrt(len);
+		tmp = ceil(sqrt(len));
 
-		if (tmp*tmp == len)
+		if (len>=(tmp*tmp)-tmp+1)
 			printf("%d\n", 2 * (tmp - 1) + 1);
-		else if ((tmp + 1)*(tmp + 1) - len > tmp)
-			printf("%d\n", 2 * tmp);
 		else
-			printf("%d\n", 2 * tmp + 1);
+			printf("%d\n", 2 * (tmp - 1));
 
 	}
+
 
 	return 0;
 }
