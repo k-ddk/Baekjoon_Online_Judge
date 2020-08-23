@@ -153,7 +153,10 @@
     <ClCompile Include="문제2750%28버블정렬%29.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="문제2750%28삽입정렬%29.c" />
+    <ClCompile Include="문제2750%28삽입정렬%29.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="문제2751(병합정렬).c" />
     <ClCompile Include="문제2798.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

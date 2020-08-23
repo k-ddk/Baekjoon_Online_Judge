@@ -66,5 +66,8 @@
     <ClCompile Include="문제2750%28삽입정렬%29.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="문제2751(병합정렬).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

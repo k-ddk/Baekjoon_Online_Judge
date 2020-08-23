@@ -3,32 +3,31 @@
 char arr[50][50];
 int black_first(int in1, int in2)
 {
-	int cnt = 0;
+	int cnt1 = 0;
 
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 8; i += 2)
 	{
-		if (i % 2 == 0 && arr[in1][in2 + i] == 'W')
-			cnt++;
-		else if (i % 2 != 0 && arr[in1][in2 + i] == 'B')
-			cnt++;
+		if (arr[in1][in2 + i] == 'W')
+			cnt1++;
+		if (arr[in1][in2 + i + 1] == 'B')
+			cnt1++;
 	}
 
-	return cnt;
+	return cnt1;
 };
 int white_first(int in1, int in2)
 {
-	int cnt = 0;
+	int cnt1 = 0;
 
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 8; i += 2)
 	{
-
-		if (i % 2 == 0 && arr[in1][in2 + i] == 'B')
-			cnt++;
-		else if (i % 2 != 0 && arr[in1][in2 + i] == 'W')
-			cnt++;
+		if (arr[in1][in2 + i] == 'B')
+			cnt1++;
+		if (arr[in1][in2 + i + 1] == 'W')
+			cnt1++;
 	}
 
-	return cnt;
+	return cnt1;
 };
 int main()
 {
@@ -49,24 +48,21 @@ int main()
 		for (int j = 0; j <= (M - 8); j++)
 		{
 			cnt = 0;
-			if (arr[i][j] == 'B')  //B 로 시작하는 경우
+			for (int k = i; k <= i + 6; k += 2)  //B로 시작하는 경우
 			{
-				for (int k = i; k <= (i + 6); k += 2)
-				{
-					cnt += black_first(k, j);
-					cnt += white_first(k + 1, j);
-				}
-
+				cnt += black_first(k, j);
+				cnt += white_first(k + 1, j);
 			}
-			else
+			if (cnt < min)
+				min = cnt;
+
+
+			cnt = 0;
+			for (int k = i; k <= (i + 6); k += 2)  //W로 시작하는 경우
 			{
-				for (int k = i; k <= (i + 6); k += 2)
-				{
-					cnt += white_first(k, j);
-					cnt += black_first(k + 1, j);
-				}
+				cnt += white_first(k, j);
+				cnt += black_first(k + 1, j);
 			}
-
 			if (cnt < min)
 				min = cnt;
 		}
@@ -76,3 +72,4 @@ int main()
 
 	return 0;
 }
+
