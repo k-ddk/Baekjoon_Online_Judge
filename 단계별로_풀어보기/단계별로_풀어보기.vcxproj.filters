@@ -69,5 +69,14 @@
     <ClCompile Include="문제2751(병합정렬).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="문제2751(힙정렬).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제10989.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문제2108.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
