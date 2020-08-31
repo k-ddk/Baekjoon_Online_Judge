@@ -10,9 +10,9 @@ int main()
 		if (len[0] == 0 && len[1] == 0 && len[2] == 0)
 			break;
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 2; i>0; i--)
 		{
-			for (int j = 0; j < 2; j++)
+			for (int j = 0; j < i; j++)
 			{
 				if (len[j] > len[j + 1])
 				{
