@@ -90,5 +90,8 @@
     <ClCompile Include="문제15649.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="문제10757.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
